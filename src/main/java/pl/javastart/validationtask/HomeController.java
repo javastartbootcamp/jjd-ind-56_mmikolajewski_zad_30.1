@@ -10,14 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.net.http.HttpClient.Redirect;
-
 @Controller
 @SessionAttributes("myObject")
 public class HomeController {
-
-    private RegisterFormDto savedForm;
-
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("data", new RegisterFormDto());
